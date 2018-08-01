@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Spaceships
 {
+    //This class is "abstract", and so an object of this type cannot be created.
+    //However, objects of classes that inherit from this one can be created (ie. RedAlien, GreenAlien, etc.)
+
     public abstract class Alien
     {
         public int x { get; set; }
@@ -18,6 +21,7 @@ namespace Spaceships
 
         }
 
+        //The value of this property is given in inheriting classes, such as RedAlien.
         public abstract string colour { get; }
     }
 }
