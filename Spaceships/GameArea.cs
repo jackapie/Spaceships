@@ -23,7 +23,7 @@ namespace Spaceships
             ship.x = maxX;
             ship.y = 1;
 
-            AlienSwarm = new AlienSwarm(0,maxY,maxX,maxY);
+            AlienSwarm = new AlienSwarm(maxX,maxY);
             
         
         }

@@ -13,7 +13,7 @@ namespace Spaceships
         public List<Alien> Aliens { get; set; }
 
         //Constructor function
-        public AlienSwarm(int x, int y, int maxX, int maxY)
+        public AlienSwarm(int maxX, int maxY)
         {
             //The below code is equivalent to this.aliens = new List<Alien>();
             //this. denotes that aliens is the name of a property of the class AlienSwarm, for which this construcor is written.

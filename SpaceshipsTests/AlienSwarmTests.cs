@@ -14,14 +14,14 @@ namespace Spaceships.Tests
         [TestMethod()]
         public void AlienSwarmTest()
         {
-            var swarm = new AlienSwarm(1, 100, 100, 100);
+            var swarm = new AlienSwarm(100, 100);
             Assert.AreEqual(30, swarm.Aliens.Count);
         }
 
         [TestMethod()]
         public void AlienSwarmMoveTest()
         {
-            var swarm = new AlienSwarm(1, 100, 100, 100);
+            var swarm = new AlienSwarm(100, 100);
             while (swarm.Aliens.First().Y > 0)
             {
                 swarm.AlienSwarmMove(100);
