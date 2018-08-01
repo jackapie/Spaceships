@@ -14,12 +14,10 @@ namespace Spaceships.Tests
         [TestMethod()]
         public void MoveTest()
         {
-            var alien = new RedAlien();
-            alien.x = 5;
-            alien.y = 20;
+            var alien = new RedAlien(5, 20);
             alien.Move(2, -15);
-            Assert.AreEqual(7, alien.x);
-            Assert.AreEqual(5, alien.y);
+            Assert.AreEqual(7, alien.X);
+            Assert.AreEqual(5, alien.Y);
             
         }
     }

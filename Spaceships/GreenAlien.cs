@@ -8,9 +8,15 @@ namespace Spaceships
 {
     public class GreenAlien : Alien
     {
-        public override string colour
+        public override string Colour
         {
             get { return "green"; }
+        }
+
+        public GreenAlien(int startX, int startY)
+        {
+            X = startX;
+            Y = startY;
         }
     }
 }

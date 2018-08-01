@@ -11,17 +11,17 @@ namespace Spaceships
 
     public abstract class Alien
     {
-        public int x { get; set; }
-        public int y { get; set; }
+        public int X { get; protected set; }
+        public int Y { get; protected set; }
         
         public void Move(int dx, int dy)
         {
-            x = x + dx;
-            y = y + dy;
+            X = X + dx;
+            Y = Y + dy;
 
         }
 
         //The value of this property is given in inheriting classes, such as RedAlien.
-        public abstract string colour { get; }
+        public abstract string Colour { get; }
     }
 }

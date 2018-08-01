@@ -10,7 +10,13 @@ namespace Spaceships
     {
 
         
-        public override string colour { get { return "red"; } }
+        public override string Colour { get { return "red"; } }
+
+        public RedAlien(int startX, int startY)
+        {
+            X = startX;
+            Y = startY;
+        } 
 
        
     }

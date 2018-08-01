@@ -10,7 +10,7 @@ namespace Spaceships
     {
 
         //property
-        public List<Alien> aliens { get; set; }
+        public List<Alien> Aliens { get; set; }
 
         //Constructor function
         public AlienSwarm(int x, int y, int maxX, int maxY)
@@ -19,27 +19,24 @@ namespace Spaceships
             //this. denotes that aliens is the name of a property of the class AlienSwarm, for which this construcor is written.
             // Writing a return type before aliens (eg. var or List<Alien>) would create an object that would be unrelated to the property we want.
 
-            aliens = new List<Alien>();
+            Aliens = new List<Alien>();
 
 
             for (int Counter = 0; Counter < 10; Counter++)
             {
-                var alienBlue = new BlueAlien();
-                aliens.Add(alienBlue);
-                alienBlue.y = maxY;
-                alienBlue.x = Counter;
+                var alienBlue = new BlueAlien(Counter, maxY);
+                Aliens.Add(alienBlue);
+              
 
 
-                var alienRed = new RedAlien();
-                aliens.Add(alienRed);
-                alienRed.y = maxY - 1;
-                alienRed.x = Counter;
+                var alienRed = new RedAlien(Counter, maxY -1);
+                Aliens.Add(alienRed);
+               
 
 
-                var alienGreen = new GreenAlien();
-                aliens.Add(alienGreen);
-                alienGreen.y = maxY - 2;
-                alienGreen.x = Counter;
+                var alienGreen = new GreenAlien(Counter, maxY -2);
+                Aliens.Add(alienGreen);
+               
 
             }
 
@@ -47,27 +44,27 @@ namespace Spaceships
 
         }
 
-        public void AlienSwarmMoveRight()
+        void AlienSwarmMoveRight()
         {
-            foreach (var alien in aliens)
+            foreach (var alien in Aliens)
             {
                 alien.Move(1, 0);
             }
         
         }
 
-        public void AlienSwarmMoveLeft()
+        void AlienSwarmMoveLeft()
         {
-            foreach (var alien in aliens)
+            foreach (var alien in Aliens)
             {
                 alien.Move(-1, 0);
              
             }
         }
 
-        public void AlienSwarmMoveDown()
+        void AlienSwarmMoveDown()
         {
-            foreach (var alien in aliens)
+            foreach (var alien in Aliens)
             {
                 alien.Move(0, -1);
                
@@ -88,9 +85,9 @@ namespace Spaceships
         public void AlienSwarmMove(int maxX)
         {
 
-            foreach (var alien in aliens)
+            foreach (var alien in Aliens)
             {
-                if (alien.x == maxX)
+                if (alien.X == maxX)
                 {
                     AlienSwarmMoveDown();
 
@@ -98,9 +95,9 @@ namespace Spaceships
                 }
             }
 
-            foreach(var alien in aliens)
+            foreach(var alien in Aliens)
             {
-                if(alien.x == 0)
+                if(alien.X == 0)
                 {
                     AlienSwarmMoveDown();
                     MovingRight = true;
