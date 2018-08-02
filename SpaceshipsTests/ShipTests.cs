@@ -15,12 +15,12 @@ namespace Spaceships.Tests
         public void MoveTest()
         {
             var ship = new Ship();
-            ship.x = 2;
-            ship.y = -3;
+            ship.X = 2;
+            ship.Y = -3;
             ship.Move(-2, 6);
 
-            Assert.AreEqual(0, ship.x);
-            Assert.AreEqual(3, ship.y);
+            Assert.AreEqual(0, ship.X);
+            Assert.AreEqual(3, ship.Y);
             
         }
     }

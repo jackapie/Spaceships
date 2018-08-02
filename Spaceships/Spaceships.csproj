@@ -45,6 +45,7 @@
     <Compile Include="BlueAlien.cs" />
     <Compile Include="GameArea.cs" />
     <Compile Include="GreenAlien.cs" />
+    <Compile Include="Guns.cs" />
     <Compile Include="RedAlien.cs" />
     <Compile Include="Ship.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

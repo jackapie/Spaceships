@@ -20,8 +20,8 @@ namespace Spaceships
         public GameArea()
         {
             ship = new Ship();
-            ship.x = maxX;
-            ship.y = 1;
+            ship.X = maxX;
+            ship.Y = 1;
 
             AlienSwarm = new AlienSwarm(maxX,maxY);
             

@@ -8,13 +8,22 @@ namespace Spaceships
 {
     public class Ship
     {
-        public int x { get; set; }
-        public int y { get; set; }
+        public int X { get; set; }
+        public int Y { get; set; }
 
         public void Move(int dx, int dy)
         {
-            x = x + dx;
-            y = y + dy;
+            X = X + dx;
+            Y = Y + dy;
+            
+        }
+
+        public void Fire(int maxY)
+        {
+            var guns = new Guns();
+            guns.StartX = X;
+            guns.StartY = Y;
+            guns.Move(maxY);
             
         }
     }
