@@ -9,22 +9,25 @@ namespace Spaceships
     public class Guns
 
     {
-        
-
-        
-        public int StartX { get; set; }
-        public int StartY { get; set; }
-        public int PositionX { get; set; }
-        public int PositionY { get; set; }
 
 
-        public void Move(int maxY)
+
+        public int X { get; set; }
+        public int Y { get; set; }
+
+
+
+        public void Move()
         {
-            PositionX = StartX;
-            for(int counter = StartY; counter < maxY; counter++)
-            {
-                PositionY = counter;
-            }
+            
+
+        
+            
+                X = X;
+                Y = Y + 1;
+            
+            
+
         }
     }
 }

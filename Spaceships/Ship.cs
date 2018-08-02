@@ -18,13 +18,11 @@ namespace Spaceships
             
         }
 
-        public void Fire(int maxY)
+       
+
+        public void ShipTurn()
         {
-            var guns = new Guns();
-            guns.StartX = X;
-            guns.StartY = Y;
-            guns.Move(maxY);
-            
+
         }
     }
 }
