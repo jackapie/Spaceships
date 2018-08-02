@@ -13,8 +13,8 @@ namespace Spaceships
         public AlienSwarm AlienSwarm { get; set; }
 
         //Fields
-        int maxX = 100;
-        int maxY = 100;
+        int maxX = 60;
+        int maxY = 30;
 
         //Constructor function. This shares the name of the class and its type is not defined here.
         public GameArea()
