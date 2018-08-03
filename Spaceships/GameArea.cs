@@ -53,6 +53,7 @@ namespace Spaceships
             if(alien != null)
             {
                 AlienSwarm.Aliens.Remove(alien);
+                Gun = null;
             }
            if(CollisionShipVsAlien() == true)
             {
