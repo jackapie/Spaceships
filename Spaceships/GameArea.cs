@@ -13,8 +13,8 @@ namespace Spaceships
         public AlienSwarm AlienSwarm { get; set; }
 
         //Fields
-        int maxX = 60;
-        int maxY = 30;
+        public const int maxX = 60;
+        public const int maxY = 30;
 
         //Constructor function. This shares the name of the class and its type is not defined here.
         public GameArea()
@@ -23,11 +23,11 @@ namespace Spaceships
             ship.X = maxX;
             ship.Y = 1;
 
-            AlienSwarm = new AlienSwarm(maxX, maxY);
+            AlienSwarm = new AlienSwarm();
 
 
         }
-        public void Fire(int maxY)
+        public void Fire()
         {
             Gun = new Guns();
             Gun.X = ship.X;
@@ -50,16 +50,19 @@ namespace Spaceships
                 Gun.Move();
             }
             var alien = CollisionAlienVsGun();
-            if(alien != null)
+            if (alien != null)
             {
                 AlienSwarm.Aliens.Remove(alien);
                 Gun = null;
             }
-           if(CollisionShipVsAlien() == true)
+            if (CollisionShipVsAlien() == true)
             {
 
             }
-
+            if (CollisionGunVsMaxY() == true)
+            {
+                Gun = null;
+            }
         }
         /// <summary>
         /// Check if X&Y of gun is the same as X&Y of any alien
@@ -84,16 +87,31 @@ namespace Spaceships
         /// </summary>
         public bool CollisionShipVsAlien()
         {
-            foreach(var alien in AlienSwarm.Aliens)
+            foreach (var alien in AlienSwarm.Aliens)
             {
-                if(alien.X == ship.X && alien.Y == ship.Y)
+                if (alien.X == ship.X && alien.Y == ship.Y)
                 {
                     return true;
                 }
             }
             return false;
         }
-  
-    
+
+        public bool CollisionGunVsMaxY()
+        {
+            if (Gun != null)
+            {
+                if (Gun.Y == maxY)
+                {
+                    return true;
+                }
+                return false;
+
+            }
+            return false;
+
+        }
+
+
     }
 }

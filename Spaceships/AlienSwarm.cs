@@ -13,7 +13,7 @@ namespace Spaceships
         public List<Alien> Aliens { get; set; }
 
         //Constructor function
-        public AlienSwarm(int maxX, int maxY)
+        public AlienSwarm()
         {
             //The below code is equivalent to this.aliens = new List<Alien>();
             //this. denotes that aliens is the name of a property of the class AlienSwarm, for which this construcor is written.
@@ -24,17 +24,17 @@ namespace Spaceships
 
             for (int Counter = 0; Counter < 10; Counter++)
             {
-                var alienBlue = new BlueAlien(Counter, maxY);
+                var alienBlue = new BlueAlien(Counter, GameArea.maxY);
                 Aliens.Add(alienBlue);
               
 
 
-                var alienRed = new RedAlien(Counter, maxY -1);
+                var alienRed = new RedAlien(Counter, GameArea.maxY -1);
                 Aliens.Add(alienRed);
                
 
 
-                var alienGreen = new GreenAlien(Counter, maxY -2);
+                var alienGreen = new GreenAlien(Counter, GameArea.maxY -2);
                 Aliens.Add(alienGreen);
                
 

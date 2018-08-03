@@ -34,7 +34,7 @@ namespace SpaceShipUI
                         game.ship.Move(1, 0);
                         break;
                     case "FIRE":
-                        game.Fire(100);
+                        game.Fire();
                         break;
                 }
 
