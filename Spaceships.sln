@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spaceships", "Spaceships\Sp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpaceshipsTests", "SpaceshipsTests\SpaceshipsTests.csproj", "{102715DD-1F3B-49BB-97AA-CC25FF935180}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpaceShipUI", "SpaceShipUI\SpaceShipUI.csproj", "{7420B217-FBCE-4269-A67B-B0547173B5A9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{102715DD-1F3B-49BB-97AA-CC25FF935180}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{102715DD-1F3B-49BB-97AA-CC25FF935180}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{102715DD-1F3B-49BB-97AA-CC25FF935180}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7420B217-FBCE-4269-A67B-B0547173B5A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7420B217-FBCE-4269-A67B-B0547173B5A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7420B217-FBCE-4269-A67B-B0547173B5A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7420B217-FBCE-4269-A67B-B0547173B5A9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
