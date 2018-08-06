@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Spaceships
 {
-    public class GreenAlien : Alien
+     class GreenAlien : Alien
     {
         public override string Colour
         {

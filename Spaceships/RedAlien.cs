@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Spaceships
 {
-    public class RedAlien : Alien
+     class RedAlien : Alien
     {
 
         
