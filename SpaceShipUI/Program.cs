@@ -11,7 +11,7 @@ namespace SpaceShipUI
     {
         static void Main(string[] args)
         {
-            Console.CursorVisible = false;
+
             var game = new GameArea();
 
             Task.Run(() =>
@@ -21,11 +21,13 @@ namespace SpaceShipUI
 
             while (true)
             {
+                Console.CursorVisible = false;
+
                 Console.Clear();
 
                 game.PlayTurn();
 
-                switch(currentAction)
+                switch (currentAction)
                 {
                     case "LEFT":
                         game.ship.Move(-1, 0);
@@ -63,7 +65,7 @@ namespace SpaceShipUI
         static void KeyHandling()
         {
 
-            
+
             while (true)
             {
                 var result = Console.ReadKey(true);
@@ -83,7 +85,7 @@ namespace SpaceShipUI
                         break;
                 }
             }
-            
+
         }
     }
 }
