@@ -34,11 +34,5 @@ namespace Spaceships
 
         }
 
-       
-
-        public void ShipTurn()
-        {
-
-        }
     }
 }

@@ -47,7 +47,7 @@ namespace Spaceships
         public void PlayTurn()
         {
             AlienSwarm.AlienSwarmMove(maxX);
-            ship.ShipTurn();
+            
             if (Gun != null)
             {
                 Gun.Move();
