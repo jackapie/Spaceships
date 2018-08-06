@@ -84,36 +84,51 @@ namespace Spaceships
 
         public void AlienSwarmMove(int maxX)
         {
+            var MovingDown = false;
 
-            foreach (var alien in Aliens)
+            // BLOCK FOR WORKING OUT WHAT WE'RE DOING
             {
-                if (alien.X == maxX)
+                
+                foreach (var alien in Aliens)
                 {
-                    AlienSwarmMoveDown();
+                    if (alien.X == maxX)
+                    {
+                       
 
-                    MovingRight = false; 
+                        MovingDown = true;
+
+                        MovingRight = false;
+                    }
+                }
+
+                foreach (var alien in Aliens)
+                {
+                    if (alien.X == 0)
+                    {
+                        MovingDown = true;
+                       
+                        MovingRight = true;
+                    }
                 }
             }
 
-            foreach(var alien in Aliens)
+            // BLOCK FOR ACTUALLY MOVING THE SWARM
             {
-                if(alien.X == 0)
+                if (MovingRight == true)
+                {
+                    AlienSwarmMoveRight();
+                }
+                else
+                {
+                    AlienSwarmMoveLeft();
+                }
+
+                if (MovingDown == true)
                 {
                     AlienSwarmMoveDown();
-                    MovingRight = true;
                 }
+                
             }
-
-            if (MovingRight == true) 
-            {
-                AlienSwarmMoveRight();
-            }
-            else
-            {
-                AlienSwarmMoveLeft();
-            }
-
-
         }
 
     }
