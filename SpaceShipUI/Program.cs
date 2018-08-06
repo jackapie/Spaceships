@@ -11,7 +11,7 @@ namespace SpaceShipUI
     {
         static void Main(string[] args)
         {
-
+            Console.SetWindowSize(GameArea.maxX, GameArea.maxY);
             var game = new GameArea();
 
             Task.Run(() =>
