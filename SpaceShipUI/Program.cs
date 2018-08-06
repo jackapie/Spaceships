@@ -30,10 +30,10 @@ namespace SpaceShipUI
                 switch (currentAction)
                 {
                     case "LEFT":
-                        game.ship.Move(-1, 0);
+                        game.Ship.Move(-1, 0);
                         break;
                     case "RIGHT":
-                        game.ship.Move(1, 0);
+                        game.Ship.Move(1, 0);
                         break;
                     case "FIRE":
                         game.Fire();
@@ -48,7 +48,7 @@ namespace SpaceShipUI
                     Console.Write(alien.Colour[0]);
                 }
 
-                Console.SetCursorPosition(game.ship.X, game.ship.Y);
+                Console.SetCursorPosition(game.Ship.X, game.Ship.Y);
                 Console.Write("S");
 
                 if (game.Gun != null)
