@@ -34,6 +34,8 @@ namespace Spaceships
                 Gun = new Guns();
                 Gun.X = Ship.X;
                 Gun.Y = Ship.Y;
+
+
             }
 
 
@@ -70,7 +72,7 @@ namespace Spaceships
         /// <summary>
         /// Check if X&Y of gun is the same as X&Y of any alien
         /// </summary>
-        public Alien CollisionAlienVsGun()
+         Alien CollisionAlienVsGun()
         {
             if (Gun != null)
             {
@@ -88,7 +90,7 @@ namespace Spaceships
         /// <summary>
         /// Check if X/Y of ship is same as X/Y of any alien
         /// </summary>
-        public bool CollisionShipVsAlien()
+         bool CollisionShipVsAlien()
         {
             foreach (var alien in AlienSwarm.Aliens)
             {
@@ -100,7 +102,7 @@ namespace Spaceships
             return false;
         }
 
-        public bool CollisionGunVsMaxY()
+         bool CollisionGunVsMaxY()
         {
             if (Gun != null)
             {
