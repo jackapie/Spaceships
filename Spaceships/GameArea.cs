@@ -29,9 +29,12 @@ namespace Spaceships
         }
         public void Fire()
         {
-            Gun = new Guns();
-            Gun.X = ship.X;
-            Gun.Y = ship.Y;
+            if (Gun == null)
+            {
+                Gun = new Guns();
+                Gun.X = ship.X;
+                Gun.Y = ship.Y;
+            }
 
 
         }
