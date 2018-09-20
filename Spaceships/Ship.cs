@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace Spaceships
 {
-    public class Ship
+    public class Ship : ScreenObject
     {
-        public int X { get; set; }
-        public int Y { get; set; }
+        public override int X { get; set; }
+        public override int Y { get; set; }
 
-        public void Move(int dx, int dy)
+        public override void Move(int dx, int dy)
         {
             X = X + dx;
             if(X > GameArea.maxX)

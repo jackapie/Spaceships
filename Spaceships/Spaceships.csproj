@@ -43,10 +43,15 @@
     <Compile Include="Alien.cs" />
     <Compile Include="AlienSwarm.cs" />
     <Compile Include="BlueAlien.cs" />
+    <Compile Include="Blue.cs" />
+    <Compile Include="Green.cs" />
+    <Compile Include="Red.cs" />
     <Compile Include="GameArea.cs" />
     <Compile Include="GreenAlien.cs" />
     <Compile Include="Guns.cs" />
     <Compile Include="RedAlien.cs" />
+    <Compile Include="ScreenObject.cs" />
+    <Compile Include="ScreenObjectDecorator.cs" />
     <Compile Include="Ship.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
